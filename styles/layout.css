@@ -117,4 +117,26 @@
     @apply border border-gray-400 border-b-2 border-opacity-20 rounded;
     @apply bg-gray-400 bg-opacity-5 py-0.5 px-1 text-xs font-mono;
   }
+
+  .col-header {
+    margin-bottom: 1rem
+  }
+
+  .col-bottom {
+    height: 200px;
+  }
+
+  p:not(.mb-0){
+    margin-bottom: 0rem;
+  }
+
+  blockquote {
+    border-left-width: 0px;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .cover .my-auto {
+    margin-top: 0;
+  }
 }
