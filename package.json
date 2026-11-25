@@ -18,8 +18,7 @@
   },
   "bugs": "https://github.com/Dawntraoz/slidev-theme-unicorn/issues",
   "slidev": {
-    "colorSchema": "both",
-    "highlighter": "all"
+    "colorSchema": "both"
   },
   "scripts": {
     "dev": "slidev example.md --open",
