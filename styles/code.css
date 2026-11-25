@@ -60,6 +60,8 @@ pre[class*='language-'] {
 
 :not(pre) > code {
   font-size: 0.9em;
+  /* inherited px line-height at the smaller font stretches the line box */
+  line-height: 1;
   background: var(--prism-background);
   @apply font-light py-0.5 rounded;
 }
