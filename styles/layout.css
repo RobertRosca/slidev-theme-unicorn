@@ -59,7 +59,7 @@
   }
 
   p:not(.mb-0) {
-    @apply mb-4 leading-6;
+    @apply mb-0 leading-6;
   }
 
   strong {
@@ -102,7 +102,9 @@
   }
 
   blockquote {
-    @apply text-sm px-2 py-1 bg-$slidev-code-background border-$slidev-theme-primary border-l rounded;
+    @apply px-2 py-1 bg-$slidev-code-background rounded text-center;
+    font-size: 1.2rem;
+    line-height: 1.25rem;
   }
 
   blockquote > * {
@@ -146,16 +148,6 @@
 
   .col-bottom {
     height: 200px;
-  }
-
-  p:not(.mb-0){
-    margin-bottom: 0rem;
-  }
-
-  blockquote {
-    border-left-width: 0px;
-    text-align: center;
-    font-size: 1.2rem;
   }
 }
 
