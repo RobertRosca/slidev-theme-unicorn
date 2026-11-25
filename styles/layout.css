@@ -43,7 +43,7 @@
   h4,
   h5,
   h6 {
-    @apply font-bold font-title bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-700 to-purple-800 dark:(from-white to-purple-50);
+    @apply font-bold font-title bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-700 to-purple-800;
   }
 
   h1 {
@@ -63,7 +63,7 @@
   }
 
   strong {
-    @apply text-purple-800 dark:text-purple-100;
+    @apply text-purple-800;
   }
 
   h1 + p {
@@ -157,4 +157,13 @@
     text-align: center;
     font-size: 1.2rem;
   }
+}
+
+/* outside the nesting: `dark:` under .slidev-layout compiles to .slidev-layout .dark */
+html.dark .slidev-layout :is(h1, h2, h3, h4, h5, h6) {
+  @apply from-white to-purple-50;
+}
+
+html.dark .slidev-layout strong {
+  @apply text-purple-100;
 }
