@@ -15,7 +15,7 @@ import Default from "./default.vue";
 
 <style>
 .slidev-layout.new-section {
-  @apply bg-gradient-to-r from-fuchsia-700 to-purple-800 text-white;
+  @apply bg-unicorn text-white;
 }
 
 .slidev-layout.new-section *,
