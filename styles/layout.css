@@ -167,3 +167,13 @@ html.dark .slidev-layout :is(h1, h2, h3, h4, h5, h6) {
 html.dark .slidev-layout strong {
   @apply text-purple-100;
 }
+
+/* gradient text exports to PDF with a box drawn round each heading;
+   slidev export emulates screen media, so key on its html.print class */
+html.print .slidev-layout :is(h1, h2, h3, h4, h5, h6) {
+  @apply bg-none text-fuchsia-700;
+}
+
+html.print.dark .slidev-layout :is(h1, h2, h3, h4, h5, h6) {
+  @apply text-white;
+}
