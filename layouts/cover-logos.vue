@@ -1,5 +1,5 @@
 <template>
-  <default class="table-contents">
+  <default class="cover-logos">
     <div class="flex items-center">
       <div class="w-1/2 px-6">
         <slot />
@@ -33,6 +33,7 @@ import Default from "./default.vue";
 const props = defineProps({
   logos: {
     type: Array,
+    default: () => [],
   },
 });
 const logoSources = computed(() =>
