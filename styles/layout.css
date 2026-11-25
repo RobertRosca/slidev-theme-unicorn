@@ -43,7 +43,7 @@
   h4,
   h5,
   h6 {
-    @apply font-bold font-title bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-700 to-purple-800;
+    @apply font-bold font-title bg-clip-text text-transparent bg-unicorn;
   }
 
   h1 {
@@ -59,7 +59,7 @@
   }
 
   p:not(.mb-0) {
-    @apply mb-4 leading-6;
+    @apply mb-0 leading-6;
   }
 
   strong {
@@ -102,7 +102,9 @@
   }
 
   blockquote {
-    @apply text-sm px-2 py-1 bg-$slidev-code-background border-$slidev-theme-primary border-l rounded;
+    @apply px-2 py-1 bg-$slidev-code-background rounded text-center;
+    font-size: 1.2rem;
+    line-height: 1.25rem;
   }
 
   blockquote > * {
@@ -147,21 +149,11 @@
   .col-bottom {
     height: 200px;
   }
-
-  p:not(.mb-0){
-    margin-bottom: 0rem;
-  }
-
-  blockquote {
-    border-left-width: 0px;
-    text-align: center;
-    font-size: 1.2rem;
-  }
 }
 
 /* outside the nesting: `dark:` under .slidev-layout compiles to .slidev-layout .dark */
 html.dark .slidev-layout :is(h1, h2, h3, h4, h5, h6) {
-  @apply from-white to-purple-50;
+  @apply bg-unicorn-light;
 }
 
 html.dark .slidev-layout strong {
@@ -170,10 +162,10 @@ html.dark .slidev-layout strong {
 
 /* gradient text exports to PDF with a box drawn round each heading;
    slidev export emulates screen media, so key on its html.print class */
-html.print .slidev-layout :is(h1, h2, h3, h4, h5, h6) {
+html.print .slidev-layout:not(.new-section) :is(h1, h2, h3, h4, h5, h6) {
   @apply bg-none text-fuchsia-700;
 }
 
-html.print.dark .slidev-layout :is(h1, h2, h3, h4, h5, h6) {
+html.print.dark .slidev-layout:not(.new-section) :is(h1, h2, h3, h4, h5, h6) {
   @apply text-white;
 }

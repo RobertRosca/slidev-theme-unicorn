@@ -95,7 +95,7 @@ logoHeader: '/logo.svg'
 website: 'dawntraoz.com'
 handle: 'dawntraoz'
 layout: image-center
-image: 'https://source.unsplash.com/collection/94734566/1920x1080'
+image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1920&h=1080&fit=crop'
 imageWidth: '450'
 imageHeight: '950'
 ---

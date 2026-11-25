@@ -1,15 +1,7 @@
 <template>
   <default class="new-section">
     <div class="flex items-center">
-      <figure class="w-1/2">
-        <!-- <img -->
-        <!--   :src="imageSrc" -->
-        <!--   alt="new section" -->
-        <!--   width="400" -->
-        <!--   height="400" -->
-        <!--   class="ml-auto object-cover max-h-[400px]" -->
-        <!-- /> -->
-      </figure>
+      <figure class="w-1/2" />
       <div class="w-1/2 text-right pr-12">
         <slot />
       </div>
@@ -18,22 +10,12 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
-import { resolveAssetUrl } from "../layoutHelper";
 import Default from "./default.vue";
-
-const props = defineProps({
-  sectionImage: {
-    type: String,
-    default: "../public/section-illustration.svg",
-  },
-});
-const imageSrc = computed(() => resolveAssetUrl(props.sectionImage));
 </script>
 
 <style>
 .slidev-layout.new-section {
-  @apply bg-gradient-to-r from-fuchsia-700 to-purple-800 text-white;
+  @apply bg-unicorn text-white;
 }
 
 .slidev-layout.new-section *,
@@ -47,5 +29,10 @@ const imageSrc = computed(() => resolveAssetUrl(props.sectionImage));
 .slidev-layout.new-section strong,
 .slidev-layout.new-section a {
   @apply text-white;
+}
+
+/* drop the theme's gradient text, which matches this background */
+.slidev-layout.new-section :is(h1, h2, h3, h4, h5, h6) {
+  @apply bg-none;
 }
 </style>
