@@ -15,21 +15,21 @@
             width="209.225"
             height="192.374"
             rx="12"
-            fill="url(#paint0_linear)"
+            :fill="`url(#${uid}-paint0_linear)`"
           />
           <rect
             x="261.18"
             width="207.82"
             height="192.374"
             rx="12"
-            fill="url(#paint1_linear)"
+            :fill="`url(#${uid}-paint1_linear)`"
           />
           <rect
             y="242.925"
             width="209.225"
             height="192.374"
             rx="12"
-            fill="url(#paint2_linear)"
+            :fill="`url(#${uid}-paint2_linear)`"
           />
           <rect
             x="261"
@@ -37,7 +37,7 @@
             width="209.225"
             height="192.374"
             rx="12"
-            fill="url(#paint3_linear)"
+            :fill="`url(#${uid}-paint3_linear)`"
           />
           <rect
             x="109.314"
@@ -45,12 +45,12 @@
             width="251.775"
             height="233.521"
             rx="8"
-            stroke="url(#paint4_linear)"
+            :stroke="`url(#${uid}-paint4_linear)`"
             stroke-width="8"
           />
           <defs>
             <linearGradient
-              id="paint0_linear"
+              :id="`${uid}-paint0_linear`"
               x1="0"
               y1="96.1872"
               x2="209.225"
@@ -61,7 +61,7 @@
               <stop offset="1" :stop-color="gradientColors[1]" />
             </linearGradient>
             <linearGradient
-              id="paint1_linear"
+              :id="`${uid}-paint1_linear`"
               x1="261.18"
               y1="96.1872"
               x2="469"
@@ -72,7 +72,7 @@
               <stop offset="1" :stop-color="gradientColors[1]" />
             </linearGradient>
             <linearGradient
-              id="paint2_linear"
+              :id="`${uid}-paint2_linear`"
               x1="0"
               y1="339.112"
               x2="209.225"
@@ -83,7 +83,7 @@
               <stop offset="1" :stop-color="gradientColors[1]" />
             </linearGradient>
             <linearGradient
-              id="paint3_linear"
+              :id="`${uid}-paint3_linear`"
               x1="261"
               y1="339.187"
               x2="470.225"
@@ -94,7 +94,7 @@
               <stop offset="1" :stop-color="gradientColors[1]" />
             </linearGradient>
             <linearGradient
-              id="paint4_linear"
+              :id="`${uid}-paint4_linear`"
               x1="105.314"
               y1="217.65"
               x2="365.09"
@@ -112,6 +112,7 @@
 </template>
 
 <script setup lang="ts">
+import { useId } from "vue";
 import Default from "../layouts/default.vue";
 
 const props = defineProps({
@@ -120,4 +121,6 @@ const props = defineProps({
     default: () => ["#A21CAF", "#5B21B6"],
   },
 });
+// several copies render at once in overview/presenter; ids must not collide
+const uid = useId();
 </script>
