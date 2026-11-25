@@ -19,7 +19,14 @@
   },
   "bugs": "https://github.com/Dawntraoz/slidev-theme-unicorn/issues",
   "slidev": {
-    "colorSchema": "both"
+    "colorSchema": "both",
+    "defaults": {
+      "fonts": {
+        "local": [
+          "Gilroy Bold"
+        ]
+      }
+    }
   },
   "scripts": {
     "dev": "slidev example.md --open",
