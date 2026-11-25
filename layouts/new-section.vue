@@ -2,13 +2,13 @@
   <default class="new-section">
     <div class="flex items-center">
       <figure class="w-1/2">
-        <img
-          :src="imageSrc"
-          alt="new section"
-          width="400"
-          height="400"
-          class="ml-auto object-cover max-h-[400px]"
-        />
+        <!-- <img -->
+        <!--   :src="imageSrc" -->
+        <!--   alt="new section" -->
+        <!--   width="400" -->
+        <!--   height="400" -->
+        <!--   class="ml-auto object-cover max-h-[400px]" -->
+        <!-- /> -->
       </figure>
       <div class="w-1/2 text-right pr-12">
         <slot />
