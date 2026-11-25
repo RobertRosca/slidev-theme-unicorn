@@ -30,4 +30,9 @@ import Default from "./default.vue";
 .slidev-layout.new-section a {
   @apply text-white;
 }
+
+/* drop the theme's gradient text, which matches this background */
+.slidev-layout.new-section :is(h1, h2, h3, h4, h5, h6) {
+  @apply bg-none;
+}
 </style>
