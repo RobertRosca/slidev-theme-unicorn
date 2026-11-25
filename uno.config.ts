@@ -4,8 +4,8 @@ import { defineConfig } from 'unocss'
 export default defineConfig({
   shortcuts: {
     // theme gradients; override these in a deck's uno.config.ts to recolour
-    'bg-unicorn': 'bg-gradient-to-r from-fuchsia-700 to-purple-800',
-    'bg-unicorn-light': 'bg-gradient-to-r from-white to-purple-50',
+    'bg-unicorn': 'bg-[linear-gradient(to_right,var(--un-gradient-stops))] from-fuchsia-700 to-purple-800',
+    'bg-unicorn-light': 'bg-[linear-gradient(to_right,var(--un-gradient-stops))] from-white to-purple-50',
     // custom the default background
     'bg-main': 'bg-unicorn-light text-gray-900 dark:(bg-unicorn text-white)',
   },
