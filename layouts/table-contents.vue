@@ -1,5 +1,5 @@
 <template>
-  <default class="table-contents" :logoHeader="logoHeader">
+  <default class="table-contents">
     <div class="flex items-center">
       <div class="w-1/2 pl-6">
         <slot />
